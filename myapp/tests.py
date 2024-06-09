@@ -65,7 +65,7 @@ class LivroTests(TestCase):
 
 
 # TESTES UNITÁRIOS -----------------------------------------------------------------
-'''
+
 class LivroModelTest(TestCase):
     def setUp(self):
         self.livro = Livro.objects.create(
@@ -127,4 +127,3 @@ class LivroModelTest(TestCase):
         )
         self.assertEqual(Livro.objects.count(), 2)
     
-'''

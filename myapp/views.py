@@ -32,4 +32,4 @@ def excluir_livro(request, pk):
     if request.method == 'POST':
         livro.delete()
         return redirect('lista_livros')
-    return render(request, 'meuapp/excluir_livro.html', {'livro': livro})
+    return render(request, 'myapp/confirmar_exclusao.html', {'livro': livro})
