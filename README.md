@@ -1,4 +1,4 @@
-﻿# TESTES UNITÁRIO S COM PYTHON E DJANGO
+﻿# TESTES UNITÁRIOS COM PYTHON E DJANGO FRAMEWORK
 
 ### Comandos Utilizados:
  python -m venv venv
