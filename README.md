@@ -2,7 +2,7 @@
 
 ### Comandos Utilizados:
  python -m venv venv
- .venv/Scripts/acivate / .venv/bin/acivate (PARA LINUX)
+ .venv/Scripts/acivate 'OU'  .venv/bin/acivate (PARA LINUX)
 
  pip install Django
 
