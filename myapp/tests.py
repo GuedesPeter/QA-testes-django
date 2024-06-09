@@ -49,7 +49,8 @@ class LivroTests(TestCase):
 
     def test_exclusao_livro(self):
         livro_id = self.livro.id
-        self.livro.delete()
+        response = self.client.post(reverse('excluir_livro', args=[livro_id]))
+        self.assertEqual(response.status_code, 302)
         with self.assertRaises(Livro.DoesNotExist):
             Livro.objects.get(id=livro_id)
 

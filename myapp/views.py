@@ -26,3 +26,10 @@ def atualizar_livro(request, pk):
     else:
         form = LivroForm(instance=livro)
     return render(request, 'myapp/atualizar_livro.html', {'form': form, 'livro': livro})
+
+def excluir_livro(request, pk):
+    livro = get_object_or_404(Livro, pk=pk)
+    if request.method == 'POST':
+        livro.delete()
+        return redirect('lista_livros')
+    return render(request, 'meuapp/excluir_livro.html', {'livro': livro})

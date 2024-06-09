@@ -16,6 +16,7 @@
                     <th>Título</th>
                     <th>Autor</th>
                     <th>Data de Publicação</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +25,13 @@
                     <td>{{ livro.titulo }}</td>
                     <td>{{ livro.autor }}</td>
                     <td>{{ livro.data_publicacao }}</td>
+                    <td>
+                        <a href="{% url 'atualizar_livro' livro.id %}" class="btn btn-warning btn-sm">Editar</a>
+                        <form method="post" action="{% url 'excluir_livro' livro.id %}" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
+                        </form>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
